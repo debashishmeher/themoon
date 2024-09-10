@@ -1,0 +1,20 @@
+extends base
+
+block content
+    .admin 
+       
+        .sidebar 
+            .toggle.sidebartogglelist#sidebartogglebtn(onclick="sidebarToggle()")
+                span.first 
+                span.second 
+                span.third 
+            ul.side-list
+                li: a(href="/admin") setting
+                li: a(href="/admin/rooms",onclick="sidebarToggle()") booking
+                li: a(href="/admin/room",onclick="sidebarToggle()") Allrooms
+                li: a(href="#",onclick="sidebarToggle()") finance
+                li: a(href="#",onclick="sidebarToggle()") history 
+                
+        //- admin controller
+        .admin-main
+            block admin-main

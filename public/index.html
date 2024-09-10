@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loader"></div>
+      </div>
+    </div>
+
+    <section class="home">
+      <!-- header section -->
+
+      <header class="header">
+        <div class="logo">roop residency<span>the luxury hotel</span></div>
+        
+          <ul class="navbar">
+            <li><a href="/" onclick="togglefun()">HOME</a></li>
+            <li><a href="#about" onclick="togglefun()">ABOUT</a></li>
+            <li>
+              <a href="#room-section" onclick="togglefun()">ROOMS & SUITES</a>
+            </li>
+            <li><a href="#restaurant" onclick="togglefun()">RESTAURANT</a></li>
+            <!-- <li><a href="#" onclick="togglefun()">PAGES</a></li> -->
+            <li><a href="#service" onclick="togglefun()">SERVICE</a></li>
+            <li><a href="#contact" onclick="togglefun()">CONTACT</a></li>
+
+            <li class="login">
+              <a href="/login" onclick="togglefun()">LOGIN</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="toggle" id="toggle" onclick="togglefun()">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </div>
+      </header>
+
+      <!-- main content -->
+      <div class="main">
+        <div class="main_content">
+          <p>luxury hotel and best resort</p>
+          <h1>enjoy a luxury experience</h1>
+          <a href="#room-section"><button class="btn">room & suites</button></a>
+        </div>
+
+        <!-- booking -->
+        <div class="find_booking">
+          <form action="#" method="get">
+            <div class="input-box">
+              <input
+                type="text"
+                name="chick-in"
+                id="chick-in"
+                placeholder="check in"
+                onfocus="this.type='date'"
+                onblur="this.type='text'"
+              />
+            </div>
+
+            <div class="input-box">
+              <input
+                type="text"
+                name="Check-out"
+                id="check-out"
+                placeholder="Check out"
+                onfocus="this.type='date'"
+                onblur="this.type='text'"
+              />
+            </div>
+
+            <div class="adults input-select">
+              <select name="adults" id="adults">
+                <option value="adults">adults</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="children input-select">
+              <select name="children" id="children">
+                <option value="children">children</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="roomsl input-select">
+              <select name="roomsl" id="roomsl">
+                <option value="rooms">rooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn">search</button>
+          </form>
+        </div>
+      </div>
+      <!-- login related -->
+    </section>
+    <section class="about-hotel" id="about">
+      <div class="about-main">
+        <span class="heighlite">roop residency luxury hotel</span>
+        <h1 class="heading-h1">enjoy a luxury experience</h1>
+        <p>
+          Welcome to the best five-star deluxe hotel in New York. Hotel
+          elementum sesue the aucan vestibulum aliquam justo in sapien rutrum
+          volutpat. Donec in quis the pellentesque velit. Donec id velit ac arcu
+          posuere blane.
+        </p>
+        <p>
+          Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the
+          aucan ligula. Orci varius natoque penatibus et magnis dis parturient
+          monte nascete ridiculus mus nellentesque habitant morbine.
+        </p>
+
+        <div class="contact-num">
+          <span class="material-symbols-outlined call-icon">
+            phone_in_talk
+          </span>
+          <div class="cont-child">
+            <div>Reservation</div>
+            <div class="num">7328899428</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-img">
+        <div class="img-box img-down" id="about-img-1">
+          <img src="./image/image3-min.jpg" alt="image" />
+        </div>
+        <div class="img-box img-up" id="about-img-2">
+          <img src="./image/image5-min.jpg" alt="image" />
+        </div>
+      </div>
+    </section>
+    <section class="room-section" id="room-section">
+      <span class="heighlite">roop residency luxury hotel</span>
+      <h1 class="heading-h1">Rooms & Suites</h1>
+      <div class="room-parent">
+        <div class="room room1">
+          <!-- <img src="./image/pexels-la-miko-3754594.jpg" alt="image" /> -->
+          <div class="room-info">
+            <p>$50/night</p>
+            <h2>Junior Suite</h2>
+            <hr />
+            <div class="room-facilities">
+              <div class="facilities-icons">
+                <span class="material-symbols-outlined"> mode_fan </span>
+                <span class="material-symbols-outlined"> router </span>
+                <span class="material-symbols-outlined"> restaurant </span>
+              </div>
+              <a href="/rooms">details</a>
+            </div>
+          </div>
+        </div>
+        <div class="room room2">
+          <!-- <img src="./image/pexels-la-miko-3754594.jpg" alt="image" /> -->
+          <div class="room-info">
+            <p>$50/night</p>
+            <h2>Junior Suite</h2>
+            <hr />
+            <div class="room-facilities">
+              <div class="facilities-icons">
+                <span class="material-symbols-outlined"> mode_fan </span>
+                <span class="material-symbols-outlined"> router </span>
+                <span class="material-symbols-outlined"> restaurant </span>
+              </div>
+              <a href="#">details</a>
+            </div>
+          </div>
+        </div>
+        <div class="room room3">
+          <!-- <img src="./image/pexels-la-miko-3754594.jpg" alt="image" /> -->
+          <div class="room-info">
+            <p>$50/night</p>
+            <h2>Junior Suite</h2>
+            <hr />
+            <div class="room-facilities">
+              <div class="facilities-icons">
+                <span class="material-symbols-outlined"> mode_fan </span>
+                <span class="material-symbols-outlined"> router </span>
+                <span class="material-symbols-outlined"> restaurant </span>
+              </div>
+              <a href="#">details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="resturent" id="restaurant">
+      <div class="restro-main">
+        <div class="restro-info">
+          <span class="heighlite">AN EXPERIENCE FOR THE SENSES</span>
+          <h1 class="heading-h1">The Restaurant</h1>
+          <p>
+            Led by Chef de Micheal Martin, The Restaurant is celebrated for its
+            excellent cuisine and unique ambience. The gorgeous dining room
+            features three open studio kitchens, allowing you to enjoy the
+            sights and sounds of the culinary artistry on display. The menu
+            showcases both Asian and European influences, with a tempting
+            selection of classic
+          </p>
+          <h2>Hours</h2>
+          <ul class="restro-time">
+            <li>Breakfast: 7.00 am – 11.00 am (daily)</li>
+            <li>Lunch: 12.00 noon – 2.00 pm (daily)</li>
+            <li>Dinner: open from 6.30 pm, last order at 10.00 pm (daily)</li>
+          </ul>
+        </div>
+        <div class="restro-img"></div>
+      </div>
+      <div class="restro-menu">
+        <span class="heighlite">LUXURY HOTEL</span>
+        <h1 class="heading-h1">Restaurant Menu</h1>
+        <ul class="menu-nav">
+          <li>Starter</li>
+          <li>Main</li>
+          <li>Breakfast</li>
+          <li>Dessert</li>
+        </ul>
+
+        <div class="menu-item-container">
+          <div class="menu-item">
+            <div class="item-name">
+              <h3>Mozzarella Dippers</h3>
+              <p>Fried mozzarella sticks, marinara sauce</p>
+            </div>
+            <span>$20</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-name">
+              <h3>Mozzarella Dippers</h3>
+              <p>Fried mozzarella sticks, marinara sauce</p>
+            </div>
+            <span>$20</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-name">
+              <h3>Mozzarella Dippers</h3>
+              <p>Fried mozzarella sticks, marinara sauce</p>
+            </div>
+            <span>$20</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-name">
+              <h3>Mozzarella Dippers</h3>
+              <p>Fried mozzarella sticks, marinara sauce</p>
+            </div>
+            <span>$20</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-name">
+              <h3>Mozzarella Dippers</h3>
+              <p>Fried mozzarella sticks, marinara sauce</p>
+            </div>
+            <span>$20</span>
+          </div>
+          <div class="menu-item">
+            <div class="item-name">
+              <h3>Mozzarella Dippers</h3>
+              <p>Fried mozzarella sticks, marinara sauce</p>
+            </div>
+            <span>$20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sticky-background">
+      <div class="sticky-img"></div>
+      <div class="sticky-container">
+        <section class="service" id="service">
+          <span class="heighlite">our service</span>
+          <h1 class="heading-h1">Hotel Facilities</h1>
+          <div class="serviice-container">
+            <div class="service-box">
+              <span class="material-symbols-outlined"> local_taxi </span>
+              <h3>Pick Up & Drop</h3>
+              <p>
+                We’ll pick up from airport while you comfy on your ride, mus
+                nellentesque habitant.
+              </p>
+            </div>
+            <div class="service-box">
+              <span class="material-symbols-outlined"> local_taxi </span>
+              <h3>Pick Up & Drop</h3>
+              <p>
+                We’ll pick up from airport while you comfy on your ride, mus
+                nellentesque habitant.
+              </p>
+            </div>
+            <div class="service-box">
+              <span class="material-symbols-outlined"> local_taxi </span>
+              <h3>Pick Up & Drop</h3>
+              <p>
+                We’ll pick up from airport while you comfy on your ride, mus
+                nellentesque habitant.
+              </p>
+            </div>
+            <div class="service-box">
+              <span class="material-symbols-outlined"> local_taxi </span>
+              <h3>Pick Up & Drop</h3>
+              <p>
+                We’ll pick up from airport while you comfy on your ride, mus
+                nellentesque habitant.
+              </p>
+            </div>
+            <div class="service-box">
+              <span class="material-symbols-outlined"> local_taxi </span>
+              <h3>Pick Up & Drop</h3>
+              <p>
+                We’ll pick up from airport while you comfy on your ride, mus
+                nellentesque habitant.
+              </p>
+            </div>
+            <div class="service-box">
+              <span class="material-symbols-outlined"> local_taxi </span>
+              <h3>Pick Up & Drop</h3>
+              <p>
+                We’ll pick up from airport while you comfy on your ride, mus
+                nellentesque habitant.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="subscribe">
+          <div class="subscribe-box">
+            <h1 class="heighlite">Subscribe</h1>
+            <p>Subscribe our newsletter to stay updated every moment</p>
+            <form action="/email" method="post" content-type="multipart/form-data">
+              <input
+                type="email"
+                name="subEmail"
+                id="updatedEmail"
+                placeholder="Enter a valid email address"
+              />
+              <button type="submit" class="btn">Submit</button>
+            </form>
+          </div>
+        </div>
+        <section class="contact" id="contact">
+          <div class="contact-info">
+            <span class="heighlite">Contact us</span>
+            <h2>
+              Each of our guest rooms feature a private bath, wi-fi, cable
+              television and include full breakfast.
+            </h2>
+            <div class="call">
+              <span class="material-symbols-outlined"> phone_in_talk </span>
+              <div class="call-num">7328899428</div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <!-- <div class="contact-form-section"></div> -->
+            <span class="heighlite">ROOMS & SUITES</span>
+            <h2>Hotel Booking Form</h2>
+            <div class="find_booking">
+              <form action="#" method="get" class="last-form">
+                <div class="input-box">
+                  <input
+                    type="text"
+                    name="chick-in"
+                    placeholder="Check out"
+                    onfocus="this.type='date'"
+                    onblur="this.type='text'"
+                  />
+                  <!-- <label for="check-in" class="label">chick in</label> -->
+                </div>
+
+                <div class="input-box">
+                  <input
+                    type="text"
+                    name="check-out"
+                    placeholder="Check out"
+                    onfocus="this.type='date'"
+                    onblur="this.type='text'"
+                  />
+                  <!-- <label for="check-out">check out </label> -->
+                </div>
+
+                <div class="adults input-select">
+                  <select name="adults" id="adults">
+                    <option value="adults">adults</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+
+                <div class="children input-select">
+                  <select name="children" id="children">
+                    <option value="children">children</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+
+                <div class="roomsl input-select">
+                  <select name="roomsl" id="roomsl">
+                    <option value="roomsl">roomsl</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn">search</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box" style="flex: 2 1 300px">
+          <h2>About Hotel</h2>
+          <p>
+            Welcome to the best five-star deluxe hotel in New York. Hotel
+            elementum sesue the aucan vestibulum aliquam justo in sapien rutrum
+            volutpat.
+          </p>
+        </div>
+        <div class="footer-box">
+          <h2>Explore</h2>
+          <ul class="example">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#room-section">Rooms & Suites</a></li>
+            <li><a href="#restaurant">Resturent</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Content</a></li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <h2>Contact</h2>
+          <p>
+            Biju Patnayak chhok, Sonepur 767017 <br />
+            Odisha, India
+          </p>
+          <div class="call">
+            <span class="material-symbols-outlined"> phone_in_talk </span>
+            <div class="call-num">7328899428</div>
+          </div>
+
+          <a href="#" class="roop-email">info@roopresidency.com</a>
+        </div>
+      </div>
+    </footer>
+    <div class="copywrite">© Copyright 2024 by Debashish Meher</div>
+
+    <!-- javascript -->
+    <script src="./js/frontend.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

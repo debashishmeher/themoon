@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gilda+Display&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin: 10vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: black;
+  border-radius: 5px;
+  height: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: var(--theme-color);
+  border-radius: 1rem;
+  border: 3px solid black;
+}
+
+:root {
+  --theme-color: #aa8453;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Gilda Display", serif;
+}
+.heading{
+  text-align: center;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+body {
+  color: white;
+  background-color: rgb(26, 26, 26);
+  font-family: "Barlow Condensed", sans-serif;
+  position: relative;
+}
+
+#loading {
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(25, 25, 25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid rgb(34, 34, 34);
+  border-top: 1px solid var(--theme-color);
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.page-heading{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+}
+.page-name{
+  color: white;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.62);
+}
+.page-links{
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  text-transform: uppercase;
+  a{
+      font-weight: 600;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.399);
+  }
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 1rem;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--theme-color);
+}
+.dialog-box{
+  background-color: white;
+  color: rgb(27, 27, 27);
+}
+
+.align-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading-main{
+  line-height: 120%;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 7vw, 3rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  /* color: var(--theme-color); */
+}
+.bold{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+.restaurant-nav {
+  /* background-color: #aa8453; */
+  display: flex;
+  padding: 10px 10%;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+.search-bar {
+  flex: 1 1;
+  padding: 5px;
+  border-radius: 50px;
+  border: 1px solid gray;
+  max-width: 400px;
+  /* background-color: aquamarine; */
+  img{
+    width: 35px;
+  }
+}
+.cart{
+  height: 35px;
+  width: 35px;
+  /* background-color: blue; */
+  img{
+    width: 100%;
+  }
+}
+.sub-headbar{
+  display: flex;
+  justify-content: space-between;
+}
