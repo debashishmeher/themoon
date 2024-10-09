@@ -22,7 +22,7 @@ exports.login = async (email, password) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://localhost:5000/login",
+      url: "https://hotelthemoon.in/login",
       data: {
         email,
         password,
@@ -92,7 +92,7 @@ exports.updateUser = async (formdata) => {
   try {
     const res = await axios({
       method: "PATCH",
-      url: "http://localhost:5000/user",
+      url: "https://hotelthemoon.in/user",
       data: formdata,
       headers: {
         "Content-Type": "multipart/form-data",
@@ -117,7 +117,7 @@ exports.signup = async (name, email, password, confirmpassword) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://localhost:5000/signup",
+      url: "https://hotelthemoon.in/signup",
       data: {
         name,
         email,
@@ -142,7 +142,7 @@ exports.forgot = async (email) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://localhost:5000/forgot",
+      url: "https://hotelthemoon.in/forgot",
       data: {
         email,
       },
@@ -162,7 +162,7 @@ exports.resetpassword = async (password, confirmpassword) => {
   try {
     const res = await axios({
       method: "patch",
-      url: `http://localhost:5000/resetPassword/${token}`,
+      url: `https://hotelthemoon.in/resetPassword/${token}`,
       data: {
         password,
         confirmpassword,
@@ -185,7 +185,7 @@ exports.getEmail = async (email) => {
   try {
     const response = await axios({
       method: "POST",
-      url: `http://localhost:5000/subscribe`,
+      url: `https://hotelthemoon.in/subscribe`,
       data: {
         email,
       },
@@ -205,7 +205,7 @@ exports.address = async (formData) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `http://localhost:5000/address`,
+      url: `https://hotelthemoon.in/address`,
       data: formData,
       httpOnly: true,
     });
@@ -214,7 +214,7 @@ exports.address = async (formData) => {
     if (res.data.status === "success") {
       // showAlert("success", res.data.message);
       window.setTimeout(() => {
-        location.assign("/cart");
+        location.assign("/checkout");
       }, 0);
     }
   } catch (err) {

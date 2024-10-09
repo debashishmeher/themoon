@@ -4,6 +4,7 @@ const roomBookingController = require("../controller/roomBookingController");
 const authController = require("../controller/authController");
 const viewController=require("../controller/viewController")
 
+Router.route("/bookingEnquary").post(roomBookingController.createBookingEnquary);
 Router.use(authController.protect, authController.accessTo("admin"));
 Router.route("/:roomId").post(roomBookingController.createBooking).get(viewController.bookingForm);
 Router.route("/").get(roomBookingController.allbooking);

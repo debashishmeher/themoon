@@ -65,6 +65,9 @@ exports.bookingForm = (req, res, next) => {
   const roomId = req.params.roomId;
   res.status(200).render("bookingForm", { roomId });
 };
+exports.bookingEnquary=(req,res,next)=>{
+  res.status(200).render("booking")
+}
 exports.createRoomForm = (req, res, next) => {
   res.status(200).render("roomCreate");
 };

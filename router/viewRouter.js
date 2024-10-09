@@ -16,6 +16,7 @@ Router.get("/place",viewController.place)
 Router.get("/rooms",viewController.rooms)
 Router.get("/restaurant",viewController.resturent)
  Router.get("/me",authControl.protect,viewController.me)
+ Router.get("/roomBooking/booking",viewController.bookingEnquary)
  Router.get("/checkout-page",authControl.protect,viewController.checkout)
 
 module.exports = Router;

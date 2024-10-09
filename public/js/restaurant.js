@@ -19,7 +19,7 @@ exports.addToCart = async (foodId, formdata) => {
   try {
     const res = await axios({
       method: "POST",
-      url: `http://localhost:5000/cart/${foodId}`,
+      url: `https://hotelthemoon.in/cart/${foodId}`,
       data: formdata,
       httpOnly: true,
     });
@@ -43,7 +43,7 @@ exports.deleteToCart = async (cartitem) => {
   try {
     const res = await axios({
       method: "DELETE",
-      url: `http://localhost:5000/cart/${cartitem}`,
+      url: `https://hotelthemoon.in/cart/${cartitem}`,
       httpOnly: true,
     });
     console.log(res.data);
@@ -64,7 +64,7 @@ exports.updateCartItem = async (itemid, quantity) => {
   try {
     const res = await axios({
       method: "PATCH",
-      url: `http://localhost:5000/cart/${itemid}`,
+      url: `https://hotelthemoon.in/cart/${itemid}`,
       data: quantity,
       httpOnly: true,
     });
@@ -86,7 +86,7 @@ exports.buying = async (formdata) => {
 console.log(formdata);
   try {
 
-    const resp = await axios("http://localhost:5000/foodOrder/checkout");
+    const resp = await axios("https://hotelthemoon.in/foodOrder/checkout");
     console.log(resp);
     if (resp.data.status === "success") {
       showAlert("success", "Redirect to Payment Successful.");
@@ -103,7 +103,7 @@ console.log(formdata);
       };
 
       var options = {
-        key: "rzp_test_SlbaOygYXkIp3A",
+        key: "rzp_test_NkNigZ2328KHsb",
         amount: resp.data.order.amount,
 
         currency: "INR",
@@ -115,7 +115,7 @@ console.log(formdata);
           name: resp.data.user.name,
           email: resp.data.user.email,
         },
-        callback_url:`http://localhost:5000/foodOrder/order/?phone=${formdata.phone}&address=${formdata.address}&payType=${formdata.payType}`,
+        callback_url:`https://hotelthemoon.in/foodOrder/order/?phone=${formdata.phone}&address=${formdata.address}&payType=${formdata.payType}`,
         options: optionshow,
 
         notes: {
@@ -142,7 +142,7 @@ exports.orderFood=async(formdata)=>{
   try {
     const res = await axios({
       method: "POST",
-      url: `http://localhost:5000/foodOrder/order`,
+      url: `https://hotelthemoon.in/foodOrder/order`,
       params,
       httpOnly: true,
     });

@@ -1,5 +1,5 @@
 import { forgot, login, signup, resetpassword, getEmail,updateUser,address } from "./login.js";
-import { roomBooking , roomBookingCancel,createRoom } from "./roomBooking.js";
+import { roomBooking , roomBookingCancel,createRoom,Booking } from "./roomBooking.js";
 import { addToCart,deleteToCart,updateCartItem,buying,orderFood } from "./restaurant.js";
 const loginbtn = document.getElementById("login");
 const userDatabtn = document.getElementById("user-data");
@@ -8,6 +8,7 @@ const forgotbtn = document.getElementById("forgot");
 const resetPassBtn = document.getElementById("passwordReset");
 const getUpdateBtn = document.getElementById("getUpdate");
 const roombookingBtn = document.getElementById("roombooking");
+const bookingForm = document.getElementById("booking");
 const createRoomBtn = document.getElementById("createRoom");
 const roombookingcancelBtn =document.querySelectorAll(".bookingCancel")
 const cartBtn =document.querySelectorAll(".cartBtn")
@@ -33,6 +34,14 @@ function getFilledData(formId) {
       const selectedRadio = document.querySelector(`input[name="${elements.name}"]:checked`);
       name=elements.name
       value=selectedRadio.value
+    }
+    else if (elements.type === "select-one") {
+      const selectElement = document.querySelector(
+        `select[name="${elements.name}"]`
+      );
+
+      name = elements.name;
+      value = selectElement.value;
     }
     else{
       name=elements.name;
@@ -105,6 +114,13 @@ if (roombookingBtn) {
     const roomId=roombookingBtn.dataset.id;
     let formData=getFilledData("roombooking")
     roomBooking(roomId,formData)
+  });
+}
+if (bookingForm) {
+  bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let formData=getFilledData("booking")
+    Booking(formData)
   });
 }
 if(roombookingcancelBtn){
